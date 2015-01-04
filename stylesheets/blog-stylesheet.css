@@ -1,7 +1,11 @@
 html {
-	font-family: Garamond;
-	margin-left: 250px;
-	margin-right: 250px;
+	font-family: 'Roboto Condensed', sans-serif;
+
+}
+
+main {
+	margin-left: 25%;
+	margin-right: 25%;
 }
 
 h1 {
@@ -9,12 +13,12 @@ h1 {
 }
 
 h4 {
-	margin-top: -20px;
+	margin-top: -40px;
 	color: #909090;
 	font-style: italic;
 }
 
 p {
-	font-family: arial;
+	font-family: 'Roboto Condensed', sans-serif;
 	font-size: 13px;
 }
