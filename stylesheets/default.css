@@ -17,6 +17,12 @@ h1 {
 	font-size: 50px;
 }
 
+#pages {
+	position: absolute;
+	right: 0;
+	top: 10px;
+}
+
 #navbar {
 	font-family: 'Oswald', sans-serif;
 	width: 100%;
@@ -39,8 +45,8 @@ h1 {
 
 header a {
 	font-family: 'Roboto Condensed', sans-serif;
-	position: absolute;
-	top: 10px;
+	float: right;
+	top: 
 	right: 0;
 	text-decoration: none;
 	color: white;
