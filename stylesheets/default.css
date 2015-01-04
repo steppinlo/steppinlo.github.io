@@ -37,7 +37,7 @@ h1 {
 	position: absolute;
 }
 
-a {
+header a {
 	font-family: 'Roboto Condensed', sans-serif;
 	position: absolute;
 	top: 10px;
@@ -65,4 +65,15 @@ a {
 	top: 160px;
 	width: 300px;
 	clear: both;
+}
+
+h2 {
+	font-size: 40px;
+	text-align: center;
+	font-weight: bold;
+}
+
+#headlines.blog {
+	font-color: black
+	width: 
 }
