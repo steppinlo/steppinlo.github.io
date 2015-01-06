@@ -3,7 +3,7 @@ body {
 	padding: 0;
 }
 
-#intro {
+.intro {
 	font-family: 'Roboto Condensed', sans-serif;
 	font-weight: bold;
 	margin-top: 210px;
@@ -14,7 +14,7 @@ body {
 	margin-left: auto;
 }
 
-#selfimage {
+.selfimage {
 	position: fixed;
 	left: 0;
 	top: 160px;
