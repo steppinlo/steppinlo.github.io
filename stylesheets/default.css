@@ -72,8 +72,7 @@ h2 {
 }
 
 #headlines.blog {
-	font-color: black
-	width: 
+	font-color: black;
 }
 
 #icons img {
@@ -86,7 +85,11 @@ h2 {
 	bottom: 5px;
 	clear: none;
 	z-index: 1;
-	left: 45%;
+	right: 0;
+	left: 0;
+	margin-right: auto;
+	margin-left: auto;
+
 }
 
 #footer {
