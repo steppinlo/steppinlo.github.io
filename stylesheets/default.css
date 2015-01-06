@@ -107,3 +107,7 @@ h2 {
 	position: fixed;
 	z-index: 0;
 }
+
+#headlines.blog h2 {
+	background-color: rgb(226, 226, 226);
+}
