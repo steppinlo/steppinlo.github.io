@@ -89,6 +89,7 @@ h2 {
 	left: 0;
 	margin-right: auto;
 	margin-left: auto;
+	width: 192px;
 
 }
 
@@ -99,6 +100,6 @@ h2 {
 	left: 0;
 	right: 0;
 	background-color: #187F7E;
-	position: absolute;
+	position: fixed;
 	z-index: 0;
 }
