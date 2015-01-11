@@ -25,3 +25,7 @@ p {
 .indent {
 	text-indent: 50px;
 }
+
+#headlines_bog {
+	text-decoration: none;
+}
