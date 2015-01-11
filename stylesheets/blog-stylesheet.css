@@ -26,6 +26,7 @@ p {
 	text-indent: 50px;
 }
 
-#headlines_bog {
+#headlines_blog a {
 	text-decoration: none;
+	color: black;
 }
