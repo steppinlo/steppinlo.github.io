@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<head>
+  <title>Stephanie's Blogs</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/blog-stylesheet.css">
+  <link href='http://fonts.googleapis.com/css?family=Oswald|Roboto+Condensed' rel='stylesheet' type='text/css'>
+</head>
+<body>
+  <header>
+    <section id="navbartop">
+      <section id="navbar"></section>
+      <section id="pages">
+        <a href="../projects.html">PROJECTS</a>
+        <a href="../blog.html">BLOGS</a>
+        <a href="../aboutme.html">ABOUT ME</a>
+        <a href="../index.html">HOME</a>
+      </section>
+        <section id="headline">Stephanie's DBC Page</section>
+    </section>
+  </header>
+<main>
+  <h1>Arrays vs Hashes</h1><BR>
+  <h4>1/10/2015</h4>
+
+  <section>
+    <p>
+      When it comes to arrays vs hashes, they appear to do similar things but they actually are completely different. In short, arrays are a collection of data, whereas hashes have pairs/assignments. Do note that when you do use a hash or an array they have different symbols, hashes are with {}, whereas arrays use [].</p>
+      <p>
+      To go further in depth, arrays have wide number of values, which can literally be anything (e.g. integers, strings, etc), each object can be referenced from its specific location. It should be noted that the first object will always start from 0, i.e. array[0] would be the first object in the array. Also, a nice thing to note is if there is an unknown number of attributes within the array, the last object can be called upon with [-1]. Example of an array is below: </p>
+      <section class ="indent">
+      <p> my_array = ["This", "is", "an", "array"]</p>
+      </section>
+      <p> Each element can be called with their numbers, so if I had a command that said, puts my_array[0], it would have "This" printed on the screen. 
+      <p>Hashes, on the other hand, will have assignments already linked to each object. So, for example, if you have a hash set up as below </p>
+      <p></p>
+      <section class="indent">
+      <p> class="indent"> state_capitol = { "New York" => "Albany"</p>
+      <p> "California" => "Sacramento"</p>
+      <p>"Illinois" => "Springfield" } </p>
+      </section>
+      <p></p>
+      <p>As you can see above, I have the states and the capitols set up. So if this was a collection of all 50 states, I could simply have in my ruby code: "puts state_capitol['New York']" and it would print out Albany.<p>
+      <p>There are benefits to using each. Arrays are better put to use when you have an ordered list of things or a collection, such as grades over a semester for a particular student. Hashes are better when there is an  assignment to each category. For example you might want to use hashes if you are classifying an object to a category (e.g. sport team names to the specific sport). 
+    </p>
+  </section>
+  
+    <footer>
+      <section id="icons">
+      <a href="mailto:lo.stephaniec@gmail.com"><img src="https://raw.githubusercontent.com/steppinlo/steppinlo.github.io/master/imgs/gmail.png"></a>
+      <a href="https://github.com/steppinlo"><img src="https://raw.githubusercontent.com/steppinlo/steppinlo.github.io/master/imgs/github.png"></a>
+      <a href="https://plus.google.com/111018843512652135934/posts"><img src="https://raw.githubusercontent.com/steppinlo/steppinlo.github.io/master/imgs/google+.png"></a>
+      <a href="https://twitter.com/whoaitsslo"><img src="https://raw.githubusercontent.com/steppinlo/steppinlo.github.io/master/imgs/twitter.png"></a>
+      <a href="https://linkedin.com/pub/stephanie-lo/5a/184/b16"><img src="https://raw.githubusercontent.com/steppinlo/steppinlo.github.io/master/imgs/linkedin.png"></a>
+      </section>
+  <section id="footer"></section> 
+  </footer>
+</body>
+

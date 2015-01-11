@@ -110,4 +110,6 @@ h2 {
 
 #headlines.blog h2 {
 	background-color: rgb(226, 226, 226);
+	text-decoration: none;
+	color: black;
 }
