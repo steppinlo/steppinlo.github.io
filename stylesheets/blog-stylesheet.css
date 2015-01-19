@@ -17,7 +17,7 @@ h4 {
 	font-style: italic;
 }
 
-p {
+.body {
 	font-family: 'Roboto Condensed', sans-serif;
 	font-size: 16px;
 }
@@ -29,4 +29,17 @@ p {
 #headlines_blog a {
 	text-decoration: none;
 	color: black;
+}
+
+.ruby {
+	font-family: Courier;
+	font-weight: bold;
+	margin-right: 10%;
+	margin-left: 10%;
+	padding: 10px 2px 2px 10px;
+	background-color: lightgray;
+	color: black;
+	line-height: 8px;
+	font-size: 13px;
+	padding-top: 2px;
 }
