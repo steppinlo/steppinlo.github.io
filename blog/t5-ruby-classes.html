@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<head>
+  <title>Stephanie's Blogs</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/blog-stylesheet.css">
+  <link href='http://fonts.googleapis.com/css?family=Oswald|Roboto+Condensed' rel='stylesheet' type='text/css'>
+</head>
+<body>
+  <header>
+    <section id="navbartop">
+      <section id="navbar"></section>
+      <section id="pages">
+        <a href="../projects.html">PROJECTS</a>
+        <a href="../blog.html">BLOGS</a>
+        <a href="../aboutme.html">ABOUT ME</a>
+        <a href="../index.html">HOME</a>
+      </section>
+        <section id="headline">Stephanie's DBC Page</section>
+    </section>
+  </header>
+<main>
+  <h1>Classes Classes Classes</h1><BR>
+  <h4>1/24/2015</h4>
+
+  <section class="body">
+    <p>Well at this point I've been coding consistently for about 5 weeks now. Yet, most of the projects that have been worked on have been pretty short and sweet, so I've never had to think about what happens when things get a bit longer. Sure, I'm familiar with functions/methods and how you can pretty much isolate the method and be able to test it, but what happens when you're working on a complex application and there are loads of methods? How do you keep everything organized? How do you make sure you don't get lost in your own code?? The answer is the usage of #classes.</p>
+    <p>Classes are great when you want to give methods to your data or have multiple instances of your data. In each class, you can set up your instance or class variables. Class has one copy shared by all different objects in class, and every object has its own copy of an instance variable. In other words, instance variables will have a unique value each time.</p>
+    <p> So why don't we go ahead and dive right into an example:</p>
+<xmp>class BaseballPlayers
+  def initialize(name, throws, bats, position)
+    @name = name
+    @throws = throws
+    @bats = bats
+    @position = position
+  end
+
+  def combo
+    "#{@name} throws #{@throws}-handed, bats #{@bats}-handed, and is a #{@position}."
+  end
+end
+
+player1 = BaseballPlayers.new("Madison Bumgarner", "left", "right", "pitcher")
+</xmp>
+    <p>Starting from the top, as you can see we created a class where it would accept information of their name, what hand they bat/throw, and their position. We then introduced the arguments into the code through <code>#initialize</code>, which will run once class is called and sets it up for usage. Here we reassigned the arguments with "@" in front so that it becomes an <code>#instance variable</code>> (if we wanted it to be a class variable, it would be prefixed with "@@"). Next, we've also created a method, and since we already established the arguments in <code>#initialize</code>, we did not need to note it on the same line as <code>#def print</code>. On the bottom we created three instances by creating player1, player2, and player3, with the information in the parenthesis.</p>
+    <p>Of course nothing will print out as we havent called the instance. But how do we call something within a class? It's pretty simple:</p>
+<xmp>puts player1.combo #Output: Madison Bumgarner throws left-handed, bats right-handed, and is a 
+pitcher.</xmp>
+    <p>Very simple! It's actually a lot like arrays and hashes (both of which are classes as well! Makes sense since they're great for organization). As you can see, methods within classes are exactly the same thing with the methods we're familiar with.</p>
+    <p>Another cool thing with classes, you can have a parent-child relationship! In other words, you can use information from one class in another, or in the right jargon, <code>inheritance</code>. Let's go ahead and create that situation:</p>
+<xmp>class Team < BaseballPlayers
+  def print_all
+    if @name = "Madison Bumgarner"
+      super + " His current team is the San Francisco Giants."
+    end
+  end
+end</xmp>
+    <p>There are a few things we introduced in this portion of the code. First, you can note we created a brand new class called Team. Secondly, we have a < character, which is used when we want a class to be extended (here we can say BaseballPlayers is extended by Team). In essence, our class <code>Team</code> has access to all of <code>BaseballPlayers</code>. As you have probably noted, the method name <code>print_all</code>is also the same as in the <code>BaseballPlayer</code> class. This is because we want to extend the code. By using <code>super</code>, we are using what already occurs in BaseballPlayers.print_all, and then extend it with the rest of the code. So the outcome is below:
+<xmp>player1b = Team.new("Madison Bumgarner", "left", "right", "pitcher")
+puts player2b.print_all #Outcome: Madison Bumgarner throws left-handed, bats right-handed, and 
+is a pitcher. His current team is the San Francisco Giants.
+</xmp>
+    <p> Also note that we used the if statement, the sole purpose is to show that the variables that we declared in BaseballPlayers is still in play. So, for example, if we had Clayton Kershaw instead, the statement would not be returned/printed. So there you have it, a brief intro to classes!</p>
+  </section>
+  <br><br><br><br>
+    <footer>
+      <section id="icons">
+      <a href="mailto:lo.stephaniec@gmail.com"><img src="https://raw.githubusercontent.com/steppinlo/steppinlo.github.io/master/imgs/gmail.png"></a>
+      <a href="https://github.com/steppinlo"><img src="https://raw.githubusercontent.com/steppinlo/steppinlo.github.io/master/imgs/github.png"></a>
+      <a href="https://plus.google.com/111018843512652135934/posts"><img src="https://raw.githubusercontent.com/steppinlo/steppinlo.github.io/master/imgs/google+.png"></a>
+      <a href="https://twitter.com/whoaitsslo"><img src="https://raw.githubusercontent.com/steppinlo/steppinlo.github.io/master/imgs/twitter.png"></a>
+      <a href="https://linkedin.com/pub/stephanie-lo/5a/184/b16"><img src="https://raw.githubusercontent.com/steppinlo/steppinlo.github.io/master/imgs/linkedin.png"></a>
+      </section>
+  <section id="footer"></section> 
+  </footer>
+</body>
+
