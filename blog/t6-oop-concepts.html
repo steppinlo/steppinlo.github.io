@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<head>
+  <title>Stephanie's Blogs</title>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/default.css">
+  <link rel="stylesheet" type="text/css" href="../stylesheets/blog-stylesheet.css">
+  <link href='http://fonts.googleapis.com/css?family=Oswald|Roboto+Condensed' rel='stylesheet' type='text/css'>
+</head>
+<body>
+  <header>
+    <section id="navbartop">
+      <section id="navbar"></section>
+      <section id="pages">
+        <a href="../projects.html">PROJECTS</a>
+        <a href="../blog.html">BLOGS</a>
+        <a href="../aboutme.html">ABOUT ME</a>
+        <a href="../index.html">HOME</a>
+      </section>
+        <section id="headline">Stephanie's DBC Page</section>
+    </section>
+  </header>
+<main>
+  <h1>Blocks, Procs, and Lambdas</h1><BR>
+  <h4>1/30/2015</h4>
+
+  <section="body">
+    <p>In this week's assignment, I decided to look into Blocks, Procs, and Lambdas. Overall each are very much related and could be interchangeably used. Each can be used to execute code. In fact, Procs and Lambdas both include blocks, so essentially those two can help keep code DRY (i.e. minimize the verbosity in the code). So let's jump right in!</p>
+    <span class="subtitle">Blocks</span>
+    <p>Blocks, in short, are code that can be dropped into a method. These are typically the "homeless" code that do not belong to any particular method grouped together between {} or do..end for multi-line blocks. For example:</p>
+<xmp>[1,2,3].each {|num| puts num}
+# ==> Prints 1, 2, 3 on separate lines
+</xmp>
+    <p>As per the example above, the block is what went between <code>{}</code>. So in this case, <code>|num| puts num</code> is the block. Blocks can also be combined with methods to execute an instruction. Blocks, unlike what we'll find out about Procs and Lambdas, are not objects and can't be stored in a variable</p>
+    <span class="subtitle">Procs</span>
+    <p>Procs are blocks turned into objects. The great thing about procs is that you can essentially recall it whenever you want, minimizing any duplication that you might want to do. Example:</p>
+<xmp>array1 = [1,2,3,4]
+new_proc = Proc.new{|num| num*2}
+
+array1.map!(&new_proc) #==> returns 2 4 6 8
+#Say we wanted to double it again!
+array1.map!(&new_proc) #==> returns 4 8 12 16
+</xmp>
+    <p>Going over this specific example, we created a proc that would double the number that passed through the proc. When we called the proc, we prefixed it with <code>&</code>, which calls the proc. Now as a refresher of the <code>&</code>, if <code>&object</code> is called, it is evaluated in a few ways. If object is a block, it converts the block into a simple proc. If the object is a Proc, then the object is converted into a block hwile preserving the current status. Otherwise, if it is not a Proc, it calls .to_proc on the object and converted into a block. Procs can also be called as a method in itself and be called by a simple method: <code>.call</code>. Simple right? 
+<xmp>new_proc = Proc.new{puts "This is a proc!"}
+new_proc.call #==> Prints "This is a proc!" to the screen
+</xmp>
+    <span class="subtitle">Lambdas</span>
+    <p>Lambdas are extremely similar to procs. Actually I would almost classify them as the same thing, but before we get there, why don't we just go ahead in seeing how they are created:</p>
+<xmp>new_lambda = lambda {|word| print word+"!!! "}
+arr = ["this", "is", "sparta"]
+
+def lambda_demo(arr, new_lambda)
+  arr.each(&new_lambda)
+end
+
+lambda_demo(arr, new_lambda) #==>Prints to screen "this!!! is!!! sparta!!!"
+</xmp>
+    <p>In that example, we displayed that you can actually pass a lambda as an argument, so if you wanted to reuse any Proc in another method, that can easily be done. Overall, creating a lambda is pretty simple. You don't even need the <code>.new</code> suffix. </p>
+    <span class="subtitle">Proc vs Lambda</span>
+    <p>The difference between the two of these is quite small but makes a huge difference. The work will be the same between the two, but in the case of a lambda, it will check the number of arguments whereas procs will not (i.e. you can get ArgumentErrors in lambdas, but not in procs). In procs, it will ignore excess arguments or assign the missing ones to <code>nil</code>. <code>return</code> is something that is viewed very differently in each type of Proc. When called, lambda will pass the control back to the calling method. Procs will act like a break and does not go back to the calling method.
+    </p>
+<xmp>def proc_method
+  proc = Proc.new{return "Will this print for proc?"}
+  proc.call
+  puts "What about now?"
+end
+
+proc_method #==>"Will this print for proc?" prints to screen
+
+def lambda_method
+  lamb = lambda {return "Will this print for lambda?"}
+  lamb.call
+  puts "What about now?"
+end
+
+lambda_method #==>"What about now?" prints to screen
+</xmp>
+  <p>Understanding lambda and procs are excellent in creating cleaner code especially if you want to iterate the same thing to multiple objects/collections/datasets. When would you use these you ask? Well, as Chris Pine puts it in Learn to Program, you can't pass methods into other methods and methods cannot reurn other methods, but you can pass procs ito methods and have them returned since procs are objects. 
+  </section>
+  <br><br><br><br>
+    <footer>
+      <section id="icons">
+      <a href="mailto:lo.stephaniec@gmail.com"><img src="https://raw.githubusercontent.com/steppinlo/steppinlo.github.io/master/imgs/gmail.png"></a>
+      <a href="https://github.com/steppinlo"><img src="https://raw.githubusercontent.com/steppinlo/steppinlo.github.io/master/imgs/github.png"></a>
+      <a href="https://plus.google.com/111018843512652135934/posts"><img src="https://raw.githubusercontent.com/steppinlo/steppinlo.github.io/master/imgs/google+.png"></a>
+      <a href="https://twitter.com/whoaitsslo"><img src="https://raw.githubusercontent.com/steppinlo/steppinlo.github.io/master/imgs/twitter.png"></a>
+      <a href="https://linkedin.com/pub/stephanie-lo/5a/184/b16"><img src="https://raw.githubusercontent.com/steppinlo/steppinlo.github.io/master/imgs/linkedin.png"></a>
+      </section>
+  <section id="footer"></section> 
+  </footer>
+</body>
+
