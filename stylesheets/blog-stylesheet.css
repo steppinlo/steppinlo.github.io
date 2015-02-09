@@ -64,3 +64,19 @@ code {
 	font-size: 25px;
 	font-weight: bold;
 }
+
+.codeBoxRight {
+	width: 44%;
+	background-color: lightgray;
+	display: inline-block;
+	float: right;
+	margin-top: 0px;
+	margin-left: 0px;
+}
+
+.codeBoxLeft {
+	margin-top: 0px;
+	width: 44%;
+	float: left;
+	margin-right: 0px;
+}
