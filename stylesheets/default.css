@@ -86,8 +86,9 @@ h2 {
 }
 
 #icons {
-	position: absolute;
-	padding-top: 7px;
+	position: fixed;
+	bottom: 3px;
+	clear: none;
 	z-index: 1;
 	right: 0;
 	left: 0;
@@ -100,10 +101,11 @@ h2 {
 #footer {
 	width: 100%;
 	height: 40px;
+	bottom: 0;
 	left: 0;
 	right: 0;
 	background-color: #187F7E;
-	position: absolute;
+	position: fixed;
 	z-index: 0;
 }
 
