@@ -112,3 +112,14 @@ h2 {
 #headlines.blog h2 {
 	background-color: rgb(226, 226, 226);
 }
+
+.aboutMe {
+	font-family: 'Roboto Condensed', sans-serif;
+	font-weight: bold;
+	margin-top: 130px;
+	width: 500px;
+	line-height: 140%;
+	padding-left: 320px;
+	margin-right: auto;
+	margin-left: auto;
+}
